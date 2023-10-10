@@ -23,7 +23,7 @@ class Newsletter extends Controller
         try{
             Mail::to($request->email)->send(new SendMail($mailData));
         }catch(Exeption $e){
-            print($e);
+            // print($e);
         }
 
         return redirect()->back();
